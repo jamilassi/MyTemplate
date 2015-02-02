@@ -12,9 +12,10 @@ var htmlFooter="";
 
 function init() {	
 document.getElementById("logo").innerHTML=titreSite('Briefcase','Javascript');
-document.getElementById("nav").innerHTML=menuSite('Homepage','index.html','Javascript','javascript.html','Page 3','','Page 4','','Page 5','');
+document.getElementById("nav").innerHTML=menuSite('Homepage','index.html','Javascript','javascript.html','','','','','','');
 document.getElementById("titreBanniere").innerHTML=titreBanniere('Javascript Projects');
 document.getElementById("banniereHorizontale").innerHTML=banniereHorizontale();
+document.getElementById("banniereHorizontale2").innerHTML=banniereHorizontale2();
 /*document.getElementById("grandeBanniereHorizontale").innerHTML=grandeBanniereHorizontale();*/
 /*document.getElementById("footer").innerHTML=footer();*/
 	}
@@ -41,25 +42,34 @@ function titreBanniere(titre) {
 	}
 	
 function banniereHorizontale() {
-	htmlBanniereHorizontale += contenuSection('1','pics01.jpg','A Daily Task Manager program, where you can add task to do, and store done tasks','todo/index.html');
-	htmlBanniereHorizontale += contenuSection('2','pics11.jpg','A Classical Tic Tac Toe game','ticTacToe/index.html');	
-	htmlBanniereHorizontale += contenuSection('3','pics12.jpg','A Clock and some of the Date() object methods','clock/index.html');
-	htmlBanniereHorizontale += contenuSection('4','pics13.jpg','A tax Calculator, with simple math calculus','projectTax/index.html');	
+	htmlBanniereHorizontale += contenuSection('1','pics01.jpg','Shows a list of element in an Array with a for loop. Uses the push method to add element. Transfers from an array to another.','todo/index.html');
+	htmlBanniereHorizontale += contenuSection('2','pics11.jpg','Uses conditions with "If" and creates interaction and scenarios interpretation as a game of Tic Tac Toe. Uses and exploit on the DOM the Document.object.getElementById()','ticTacToe/index.html');	
+	htmlBanniereHorizontale += contenuSection('3','pics12.jpg','Uses the Date() Object to show the date and the function setInterval() to simulate a watch by refreshing the browser each second (1000ms)','clock/index.html');
+	htmlBanniereHorizontale += contenuSection('4','pics13.jpg','Simple program using too variables as taxes and return results of taxes','projectTax/index.html');	
 	return htmlBanniereHorizontale;		
 	}
 	
+function banniereHorizontale2() {
+	var htmlBanniereHorizontale2='';
+	htmlBanniereHorizontale2 += contenuSection('5','pics14.jpg','Uses the Date(), constructing a Calendar with different options like language and size that can be modified','Calendar/index.html');
+	htmlBanniereHorizontale2 += contenuSection('6','pics15.jpg','Outline and commentaries having on prospective a new project of Cash Register','CashRegister.html');
+	/*htmlBanniereHorizontale += contenuSection('2','pics11.jpg','Uses conditions with "If" and creates interaction and scenarios interpretation as a game of Tic Tac Toe. Uses and exploit the DOM: Document.object.getElementById()','ticTacToe/index.html');	
+	htmlBanniereHorizontale += contenuSection('3','pics12.jpg','Uses the Date() Object to show the date and the function setInterval() to simulate a watch by refreshing the browser each second (1000ms)','clock/index.html');
+	htmlBanniereHorizontale += contenuSection('4','pics13.jpg','Simple program using too variables as taxes and return results of taxes','projectTax/index.html');	*/
+	return htmlBanniereHorizontale2;		
+	}
 function contenuSection(numSection,imageFichier,resume,lien) {
 	htmlContenuSection ="";
 	htmlContenuSection += '<div class="3u">';
 	htmlContenuSection += '<section id="section'+numSection+'">';
 	htmlContenuSection += '<a href="'+lien+'" class="image full" target="_blank"><img src="images/'+imageFichier+'" alt="" /></a>';
 	htmlContenuSection += '<div id="interneTailleOngletDesktop" style="height:75px;"><p>'+resume+'</p></div>';
-	htmlContenuSection += '<a href="'+lien+'" class="button" target="_blank">Open</a>';
+	/*htmlContenuSection += '<a href="'+lien+'" class="button" target="_blank">Open</a>';*/
 	htmlContenuSection += '</section>';
 	htmlContenuSection += '</div>';
 	return htmlContenuSection;
 	}
-	
+	/*
 function grandeBanniereHorizontale() {
 	htmlGrandeBanniereHorizontale += '<!-- Content -->';
 	htmlGrandeBanniereHorizontale += '<div class="8u skel-cell-important">';
@@ -95,8 +105,8 @@ function grandeBanniereHorizontale() {
 	htmlGrandeBanniereHorizontale += '<!-- Sidebar -->';
 					return htmlGrandeBanniereHorizontale;
 	}
-	
-function footer() {
+	*/
+/*function footer() {
 	htmlFooter += '<div class="container">';
 	htmlFooter += '<div class="row">';
 	htmlFooter += '<div class="3u">';
@@ -142,4 +152,4 @@ function footer() {
 	htmlFooter += '</ul></section></div></div></div>';
 	return htmlFooter;
 	}
-
+*/

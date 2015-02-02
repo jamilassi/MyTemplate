@@ -15,7 +15,7 @@ var htmlFooter="";
 
 function init() {	
 document.getElementById("logo").innerHTML=titreSite('Briefcase','J.A.');
-document.getElementById("nav").innerHTML=menuSite('Homepage','index.html','Javascript','javascript.html','Page 3','','Page 4','','Page 5','');
+document.getElementById("nav").innerHTML=menuSite('Homepage','index.html','Javascript','javascript.html','','','','','','');
 /*document.getElementById("titreBanniere").innerHTML=titreBanniere('Javascript Projects');*/
 /*document.getElementById("banniereHorizontale").innerHTML=banniereHorizontale();*/
 document.getElementById("grandeBanniereHorizontale").innerHTML=grandeBanniereHorizontale();
@@ -47,10 +47,10 @@ function titreBanniere(titre) {
 	}
 	
 function banniereHorizontale() {
-	htmlBanniereHorizontale += contenuSection('1','pics01.jpg','A Daily Task Manager program, where you can add task to do, and store done tasks','#');
-	htmlBanniereHorizontale += contenuSection('2','pics11.jpg','A Classical Tic Tac Toe game','#');	
-	htmlBanniereHorizontale += contenuSection('3','pics12.jpg','A Clock and some of the Date() object methods','#');
-	htmlBanniereHorizontale += contenuSection('4','pics13.jpg','A tax Calculator, with simple math calculus','#');	
+	htmlBanniereHorizontale += contenuSection('1','pics01.jpg','Shows a list of element in an Array with a for loop. Uses the push method to add element. Transfers from an array to another.','#');
+	htmlBanniereHorizontale += contenuSection('2','pics11.jpg','Uses conditions with "If" and creates interaction and scenarios interpretation as a game of Tic Tac Toe. Uses and exploit the DOM: Document.object.getElementById()','#');	
+	htmlBanniereHorizontale += contenuSection('3','pics12.jpg','Uses the Date() Object to show the date and the function setInterval() to simulate a watch by refreshing the browser each second (1000ms)','#');
+	htmlBanniereHorizontale += contenuSection('4','pics13.jpg','Simple program using too variables as taxes and return results of taxes','#');	
 	return htmlBanniereHorizontale;		
 	}
 	
@@ -73,8 +73,8 @@ function banniereHorizontale() {
 
 	
 function grandeBanniereHorizontale() {
-	htmlGrandeBanniereHorizontale += contenuGrandeSection('Javascript','Javascript is the script language of the web','pics02.jpg','Some native javascript will be illustrated on few programs made for different projects. The Jquery Library is seen on second point.','javascript.html');
-	htmlGrandeBanniereHorizontale += contenuPetiteSection('More...', 'From the Web', 'We have use as platform JSFiddle, and for practice and evaluation the Codecademy Website.','http://jsfiddle.net','The JSFiddle Platform Website','http://www.codecademy.com/learn','The Codecademy Site','','');
+	htmlGrandeBanniereHorizontale += contenuGrandeSection('Javascript','The script language of the web','pics02.jpg','Native JS Projects','javascript.html');
+	htmlGrandeBanniereHorizontale += contenuPetiteSection('More...', 'From the Web', '','http://jsfiddle.net','The JSFiddle Platform Website','http://www.codecademy.com/learn','The Codecademy Site','','');
 	return htmlGrandeBanniereHorizontale;
 }
 
@@ -88,9 +88,9 @@ function grandeBanniereHorizontale() {
 				  htmlcontenuGrandeSection += '<h2>'+titre+'</h2>';
 				  htmlcontenuGrandeSection += '<span class="byline">'+sousTitre+'</span>';
 				  htmlcontenuGrandeSection += '</header>';
-				  htmlcontenuGrandeSection += '<p><a href="#" class="image full"><img src="images/'+imageFichier+'" alt=""></a></p>';
+				  htmlcontenuGrandeSection += '<p><a href="'+lien+'" class="image full"><img src="images/'+imageFichier+'" alt=""></a></p>';
 				  htmlcontenuGrandeSection += '<p>'+texte+'</p>';
-				  htmlcontenuGrandeSection += '<a href="'+lien+'" class="button">Open</a>';
+				  /*htmlcontenuGrandeSection += '<a href="'+lien+'" class="button">Open</a>';*/
 				  htmlcontenuGrandeSection += '</section>';
 				  htmlcontenuGrandeSection += '</div>';
 				  htmlcontenuGrandeSection += '<!-- /Content -->';
